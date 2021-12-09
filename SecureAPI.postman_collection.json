@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "abb6a9cb-11ad-430c-a8d2-84a55ede79ed",
+		"name": "SecureAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ClientId",
+						"value": "3f686012-fe0b-49b9-90a5-12d98d303a35",
+						"type": "text"
+					},
+					{
+						"key": "ClientSecret",
+						"value": "U2VjcmV0ZQ==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44344/api/AccessTokens",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44344",
+					"path": [
+						"api",
+						"AccessTokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather Forecast",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkUzQzdBRDRCRTUzRUI0OEZDMzQ1NDRFNzM0OTY5NjA4IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MzkwNzQyMjEsImV4cCI6MTYzOTA3NzgyMSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjUwMDEvcmVzb3VyY2VzIiwiY2xpZW50X2lkIjoiM2Y2ODYwMTItZmUwYi00OWI5LTkwYTUtMTJkOThkMzAzYTM1IiwianRpIjoiODM0M0M5NTA1NEEzOUI4RjJGRjFGNzMzQ0Y2NzQxNTEiLCJpYXQiOjE2MzkwNzQyMjEsInNjb3BlIjpbIkFwaVNjb3BlIl19.EWA5566D5e9V_I0fsBM73AAa_G_RKoWFejW0Pkn5WTkUtojdiMVKuRM8DllnO5yjzfWToP8gA4zi4s64I3ML4vhL8ItEagNnsj3vJvWXLmq72fJ76tHEt7W2P04vBm-DR8wjsEL0nVf3Ik8GMvHVcpxqiewa7ESYgkdRhFMjH8eQOZIWcw8vbivfn202G1Qcw6TYK3WoPKkEdHDRQTs5qZGxS-JB7quNikLCfCQsGTBeKBsFLx5R7iMu4RFfMkwbxPKeCfe86mao-2ppP0fpxAqVvL714vNEBZitDaK26qn-NUeZ_VeHfWo1_L1L6ZtEn_JKBvaAOOiiw1D3A5Bbpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44344/api/WeatherForecast",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44344",
+					"path": [
+						"api",
+						"WeatherForecast"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
